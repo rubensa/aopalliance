@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+
+
+<project name="aopalliance" default="jar" basedir=".">
+
+
+	<!--
+	    Compile main source tree
+	-->
+	<target name="build">
+
+		<mkdir dir="build" />
+		<javac destdir="build"
+			debug="${debug}"
+			deprecation="false" optimize="false"
+			failonerror="false"
+			>
+			<src path="src"/>
+
+		</javac>
+	</target>
+
+
+	<!--
+	    Build one big JAR.
+	-->
+	<target name="jar" depends="build">
+
+		<jar jarfile="aopalliance.jar">
+			<fileset dir="build">
+			</fileset>
+		</jar>
+	</target>
+
+
+
+</project>
