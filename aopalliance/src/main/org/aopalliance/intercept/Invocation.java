@@ -5,64 +5,71 @@ package org.aopalliance.intercept;
  * This interface represents an invocation in the program.
  *
  * <p>An invocation is a joinpoint and can be intercepted by an
- * interceptor. */
+ * interceptor.
+ *
+ * @author Rod Johnson */
 
 public interface Invocation extends Joinpoint {
-    /**
-     * Invoke the next interceptor in the chain.
-     *
-     * @return the result of the call on the target (might be intercepted and changed by an interceptor).
-     * @throws Throwable if the call throws an exception.
-     */
-    Object invokeNext() throws Throwable;
 
-    /**
-     * Gets the target of the call.
-     * [RJ] May return null if there is no target object.
-     *
-     * @return the actual target object.
-     */
-    Object getInvokedObject();
-
-	/**
-	 * Return the AOP proxy through which this invocation passed
-	 * RJ
-	 * @return Object
-	 */
-	Object getProxy();
-
-    /**
-     * [RJ]
-     * the addResource and getResource methods
-     * @param key name of the resource
-     * @param resource
-     * @return the former value of the resource with this key,
-     * or null if no resource was set
-     */
-    Object setResource(String key, Object resource);
-
-    /**
-     * [RJ]
-     * Return the resource with the given key
-     * @param key
-     * @return Object
-     */
-    Object getResource(String key);
-
-	/**
-	 * [RJ]
-	 * Creates a copy of this invocation. Use to hold on to an instance longer
-	 * than the duration of a method invocation. The new instance is not
-	 * invokable.
-	 */
-	Invocation cloneInstance();
-	
-	/**
-	* Return the AttributeRegistry. Cannot return null (but
-	* can return an empty attribute registry).
-	* TODO or do we want getAttributes() on this!? not tied to method.
-	* Would be easier to test.
-	* @return AttributeRegistry
-	*/
+   /**
+    * The addResource and getResource methods.
+    *
+    * @param key name of the resource
+    * @param resource
+    * @return the former value of the resource with this key,
+    * or null if no resource was set
+    */
+   Object setResource(String key, Object resource);
+   
+   /**
+    * Return the resource with the given key.
+    *
+    * @param key
+    * @return Object
+    */
+   Object getResource(String key);
+   
+   /**
+    * Creates a copy of this invocation.
+    *
+    * <p>Use to hold on to an instance longer than the duration of a
+    * method invocation. The new instance is not invokable. */
+   Invocation cloneInstance();
+   
+   /**
+    * Returns the AttributeRegistry.
+    *
+    * <p>Cannot return null (but can return an empty attribute
+    * registry).  TODO or do we want getAttributes() on this!? not
+    * tied to method.  Would be easier to test.
+    *
+    * @return AttributeRegistry */
    AttributeRegistry getAttributeRegistry();
+   
+   /**
+    * Gets the value of the argument at the specified index.
+    *
+    * @param index the index.
+    * @return the value of the argument. */
+   Object getArgument(int index);
+   
+   /**
+    * Modifies the specified argument.
+    *
+    * @param index the index of the argument.
+    * @param argument the new value of the argument. */
+   void setArgument(int index, Object argument);
+   
+   /**
+    * Gets the number of arguments in the call.
+    *
+    * @return the number arguments to the call. */
+   int getArgumentCount();
+
+   /**
+    * Get the arguments as an array object.
+    *
+    * @return the argument of the invocation */
+   Object[] getArguments();
+
 }
