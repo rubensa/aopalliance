@@ -24,8 +24,8 @@ public interface AttributeRegistry {
 	 * May return null if there are no attributes associated with this
 	 * object
 	 */
-	Attribute[] getAttributes(AccessibleObject ao);
+	Object[] getAttributes(AccessibleObject ao);
 	
-	Attribute[] getAttributes(Class clazz);
+	Object[] getAttributes(Class clazz);
 
 }

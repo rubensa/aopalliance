@@ -17,6 +17,12 @@ public interface Invocation {
      */
     Object getInvokedObject();
 
+	/**
+	 * Return the AOP proxy through which this invocation passed
+	 * RJ
+	 * @return Object
+	 */
+	Object getProxy();
 
     /**
      * [RJ]
@@ -43,4 +49,13 @@ public interface Invocation {
 	 * invokable.
 	 */
 	Invocation cloneInstance();
+	
+	/**
+	* Return the AttributeRegistry. Cannot return null (but
+	* can return an empty attribute registry).
+	* TODO or do we want getAttributes() on this!? not tied to method.
+	* Would be easier to test.
+	* @return AttributeRegistry
+	*/
+   AttributeRegistry getAttributeRegistry();
 }
