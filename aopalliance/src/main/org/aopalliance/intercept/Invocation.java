@@ -19,7 +19,7 @@ public interface Invocation extends Joinpoint {
     * @return the former value of the resource with this key,
     * or null if no resource was set
     */
-   Object setResource(String key, Object resource);
+   Object addAttachment(String key, Object resource);
    
    /**
     * Return the resource with the given key.
@@ -27,7 +27,7 @@ public interface Invocation extends Joinpoint {
     * @param key
     * @return Object
     */
-   Object getResource(String key);
+   Object getAttachment(String key);
    
    /**
     * Creates a copy of this invocation.
