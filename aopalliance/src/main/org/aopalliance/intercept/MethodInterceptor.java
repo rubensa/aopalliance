@@ -1,7 +1,7 @@
 package org.aopalliance.intercept;
 
 /**
- * Intercepts calls on an interface on it's way to the target. These
+ * Intercepts calls on an interface on its way to the target. These
  * are nested "on top" of the target.
  *
  * <p>The user should implement the {@link #invoke(MethodInvocation)}
@@ -21,8 +21,8 @@ package org.aopalliance.intercept;
  * }
  * </pre> */
 
-public interface MethodInterceptor extends Interceptor
-{
+public interface MethodInterceptor extends Interceptor {
+	
     /**
      * Implement this method to perform extra treatments before and
      * after the invocation. Polite implementations would certainly

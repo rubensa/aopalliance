@@ -1,6 +1,8 @@
 
 package org.aopalliance.intercept;
 
+import org.aopalliance.aop.Advice;
+
 /**
  * This interface represents a generic interceptor.
  *
@@ -46,5 +48,5 @@ package org.aopalliance.intercept;
  *
  * @see Joinpoint */
 
-public interface Interceptor {
+public interface Interceptor extends Advice {
 }

@@ -44,10 +44,11 @@ public class AspectException extends RuntimeException {
 	}
 	
 	/**
+	 * Return the root cause of this exception.
 	 * May be null
 	 * @return Throwable
 	 */
-	public Throwable getRootCause() {
+	public Throwable getCause() {
 		return t;
 	}
 
