@@ -128,7 +128,7 @@ public interface Code {
     * [...]
     * </pre>
     *
-    * @param exeptionType the type of the throwed exception */
+    * @param exceptionType the type of the throwed exception */
    CodeLocator getThrowLocator(Class exceptionType);
 
    /**
@@ -148,7 +148,7 @@ public interface Code {
     * [...]
     * </pre>
     *
-    * @param exeptionType the type of the throwed exception */
+    * @param exceptionType the type of the throwed exception */
    CodeLocator getCatchLocator(Class exceptionType);
    
 }
