@@ -19,7 +19,7 @@ public class Call implements Serializable {
         declaringClass = method.getDeclaringClass();
         parameterTypes = invocation.getMethod().getParameterTypes();
 
-        target = invocation.getInvokedObject();
+        target = invocation.getThis();
 
         int argumentCount = invocation.getArgumentCount();
         args = new Object[argumentCount];
