@@ -1,4 +1,4 @@
-package org.aopalliance;
+package org.aopalliance.intercept;
 
 import java.io.PrintStream;
 import java.io.PrintWriter;

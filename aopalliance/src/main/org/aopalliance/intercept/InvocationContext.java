@@ -1,5 +1,5 @@
 
-package org.aopalliance;
+package org.aopalliance.intercept;
 
 /**
  * All AOP Frameworks must provide an implementation of this method to 

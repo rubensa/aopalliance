@@ -1,7 +1,6 @@
-package org.aopalliance;
+package org.aopalliance.intercept;
 
 import java.lang.reflect.Method;
-
 
 /**
  * Description of an invocation to a method, given to an interceptor upon method-call.
@@ -68,3 +67,4 @@ public interface MethodInvocation extends Invocation
      */
     int getArgumentCount();
 }
+

@@ -1,5 +1,5 @@
 
-package org.aopalliance;
+package org.aopalliance.intercept;
 
 import java.lang.reflect.AccessibleObject;
 

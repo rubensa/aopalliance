@@ -1,4 +1,4 @@
-package org.aopalliance;
+package org.aopalliance.intercept;
 
 import java.io.*;
 import java.lang.reflect.Method;
@@ -30,7 +30,7 @@ public class Call implements Serializable {
 
     /**
      * TODO Finds the method for each call, implement Externalizable instead.
-     * @return
+     * @return the method of the call
      */
     public Method getMethod() {
         try {
