@@ -9,8 +9,6 @@ import java.io.StringWriter;
  * Unchecked, as such exceptions are fatal and end user
  * code shouldn't be forced to catch them.
  * 
- * HAVEN'T TESTED THIS
- * 
  * @author Rod Johnson
  * @author Bob Lee
  */
