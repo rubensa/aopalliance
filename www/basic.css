@@ -1,16 +1,15 @@
 body {
   font-family: helvetica, sans-serif; 
-  font-size:11px;
   background-color: white;
   padding-left: 1em;
   padding-right: 1em;
 }
 .title {
   font-family: helvetica, sans-serif; 
-  font-size:14px;
   font-weight:bold;
   background-color: white;
   text-align:center;
+  font-size: large;
 }
 p, ul, ol, dl {  
   margin-left: 4em;
@@ -47,7 +46,7 @@ h1 {
   background-color: #222244;
   padding: 0.1em 0.2em 0.1em 0.3em;
   font-weight: bold;
-  font-size: 12px;
+  font-size: large;
 }
 h1, h2, h3, h4 {
   margin-top: 1em;
@@ -56,6 +55,7 @@ h1, h2, h3, h4 {
 h2, h3, h4 {
   color: #A00000;
   font-weight: normal;
+  font-size: large;
 }
 h4 {
   font-style: italic;
